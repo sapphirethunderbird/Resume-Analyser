@@ -1,0 +1,4 @@
+model:
+  embedding: all-MiniLM-L6-v2
+  tfidf_max_features: 1000
+  advice_threshold: 0.5
