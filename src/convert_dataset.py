@@ -1,7 +1,7 @@
 # src/convert_dataset.py
+import os
 
 import pandas as pd
-import os
 
 
 def save_resumes_from_csv(csv_path, output_dir):
@@ -11,7 +11,8 @@ def save_resumes_from_csv(csv_path, output_dir):
 
     for i, row in df.iterrows():
         resume_text = row["Resume"]
-        category = row.get("Category", "Unknown").replace(" ", "_")
+        category = row.get("Category", "Unknown")
+        category = category.replace(" ", "_")
         filename = f"resume_{i}_{category}.txt"
         file_path = os.path.join(output_dir, filename)
 
