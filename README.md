@@ -13,6 +13,12 @@ Install requirements with `pip install -r requirements.txt`. Then, do `pip insta
 To convert the csv data to text data, run the following: <br>
 `python src/convert_dataset.py --csv data/raw/UpdatedResumeDataSet.csv --outdir data/processed/converted`
 
+## train_classifier.py
+
+Initial training with Logistic Regression. Run with `python src/train_classifier.py`. <br>
+Example output: <br>
+![./assets/Logistic_Regression_Test.png](./assets/Logistic_Regression_Test.png)
+
 ## advice.py
 
 This is an MVP version of the Resume-Analyser (more like pre-beta). The test was done on a data science resume, and the criterea was the following:
