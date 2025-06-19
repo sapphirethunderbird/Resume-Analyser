@@ -22,6 +22,10 @@ Initial training with Logistic Regression. Run with `python src/train_classifier
 Example output: <br>
 ![./assets/Logistic_Regression_Test.png](./assets/Logistic_Regression_Test.png)
 
+## predict.py
+
+For testing predicted category based on resume.
+
 ## advice.py
 
 This is an MVP version of the Resume-Analyser (more like pre-beta). The test was done on a data science resume, and the criterea was the following:
