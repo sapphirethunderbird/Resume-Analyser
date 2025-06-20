@@ -26,6 +26,8 @@ Example output: <br>
 
 For testing predicted category based on resume.
 
+> Still working on test data
+
 ## advice.py
 
 This is an MVP version of the Resume-Analyser (more like pre-beta). The test was done on a data science resume, and the criterea was the following:
