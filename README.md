@@ -14,7 +14,9 @@ Install requirements with `pip install -r requirements.txt`. Then, do `pip insta
 ## Converting csv data to text data
 
 To convert the csv data to text data, run the following: <br>
-`python src/convert_dataset.py --csv data/raw/UpdatedResumeDataSet.csv --outdir data/processed/converted`
+`python src/convert_dataset.py --csv data/raw/UpdatedResumeDataSet.csv --outdir data/processed/converted`<br>
+
+> Feature for analyzing PDFs is currently under development
 
 ## train_classifier.py
 

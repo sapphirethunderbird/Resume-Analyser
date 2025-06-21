@@ -2,9 +2,12 @@ import os
 
 import pandas as pd
 
+# Ideally, we would analyze the pdf as opposed to the csv file.
+# That's how most resume's would some anyways
 
-def process_resumes(csv_path, output_dir):
-    df = pd.read_csv(csv_path)
+
+def process_resumes(pdf_path, output_dir):
+    df = pd.read_csv(pdf_path)
 
     os.makedirs(output_dir, exist_ok=True)
 
@@ -20,19 +23,18 @@ def process_resumes(csv_path, output_dir):
 
     print(f"Saved {len(df)} resumes to {output_dir}")
 
-def 
 
 if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--csv", type=str, required=True, help="Path to the resume CSV")
+    parser.add_argument("--pdf", type=str, required=True, help="Path to the resume PDF")
     parser.add_argument(
         "--outdir",
         type=str,
-        default="data/processed",
+        default="data/test_data/processed",
         help="Output directory for text files",
     )
     args = parser.parse_args()
 
-    save_resumes_from_csv(args.csv, args.outdir)
+    process_resumes(args.csv, args.outdir)
