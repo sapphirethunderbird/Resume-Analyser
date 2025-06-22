@@ -1,27 +1,26 @@
 import os
+from pathlib import Path
 
-import pandas as pd
+from pypdf import PdfReader
 
 # Ideally, we would analyze the pdf as opposed to the csv file.
 # That's how most resume's would some anyways
 
 
-def process_resumes(pdf_path, output_dir):
-    df = pd.read_csv(pdf_path)
-
+def process_resumes(raw_data, output_dir):
     os.makedirs(output_dir, exist_ok=True)
-
-    for i, row in df.iterrows():
-        resume_text = row["Resume"]
-        category = row.get("Category", "Unknown")
-        category = category.replace(" ", "_")
-        filename = f"resume_{i}_{category}.txt"
+    pdf_search = Path(raw_data).glob("*.pdf")
+    pdf_files = [str(file.absolute()) for file in pdf_search]
+    for pdf in pdf_files:
+        reader = PdfReader(pdf)
+        page = reader.pages[pdf_files]
+        processed_resume = page.extrac_text()
+        filename = f"resume_{pdf}.txt"
         file_path = os.path.join(output_dir, filename)
-
         with open(file_path, "w", encoding="utf-8") as f:
-            f.write(resume_text)
+            f.write(processed_resume)
 
-    print(f"Saved {len(df)} resumes to {output_dir}")
+    print(f"Saved {len(pdf_search)} resumes to {output_dir}")
 
 
 if __name__ == "__main__":
@@ -32,9 +31,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "--outdir",
         type=str,
-        default="data/test_data/processed",
+        default="../data/test_data/processed",
         help="Output directory for text files",
     )
     args = parser.parse_args()
 
-    process_resumes(args.csv, args.outdir)
+    process_resumes(args.pdf, args.outdir)
