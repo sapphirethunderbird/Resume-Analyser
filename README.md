@@ -24,6 +24,8 @@ Initial training with Logistic Regression. Run with `python src/train_classifier
 Example output: <br>
 ![./assets/Logistic_Regression_Test.png](./assets/Logistic_Regression_Test.png)
 
+> Will experiment with other algorithms as well
+
 ## predict.py
 
 For testing predicted category based on resume.
