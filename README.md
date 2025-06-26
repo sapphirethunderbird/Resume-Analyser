@@ -11,12 +11,18 @@ The test data is from [here](https://www.kaggle.com/datasets/snehaanbhawal/resum
 
 Install requirements with `pip install -r requirements.txt`. Then, do `pip install numpy==1.26.0 --force-reinstall` for compatibility. <br>
 
-## Converting csv data to text data
+## Converting resume data to text data
+
+### CSV
 
 To convert the csv data to text data, run the following: <br>
 `python src/convert_dataset.py --csv data/raw/UpdatedResumeDataSet.csv --outdir data/processed/converted`<br>
 
-> Feature for analyzing PDFs is currently under development
+### PDF
+
+To convert pdf data to text data, run the following: <br>
+`python src/convert_test_data.py --pdfdir <data directory> --outdir <desired output directory>
+`
 
 ## train_classifier.py
 
