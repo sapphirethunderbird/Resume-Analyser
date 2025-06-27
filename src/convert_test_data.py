@@ -8,7 +8,9 @@ def process_resumes(raw_data_dir, output_dir):
     os.makedirs(output_dir, exist_ok=True)
 
     # 🔍 Recursively find all PDFs in subfolders
-    pdf_files = list(Path(raw_data_dir).rglob("*.pdf"))
+    pdf_files = list(
+        Path(raw_data_dir).rglob("*.pdf")
+    )  # Use rglob here instead of glob
 
     for i, pdf_path in enumerate(pdf_files):
         try:

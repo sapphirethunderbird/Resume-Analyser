@@ -37,7 +37,9 @@ Example output: <br>
 
 ## predict.py
 
-For testing predicted category based on processed resume.
+For testing predicted category based on processed resume. <br>
+
+> Also works on test data
 
 ## advice.py
 
