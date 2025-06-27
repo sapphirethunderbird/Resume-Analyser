@@ -23,6 +23,9 @@ To convert the csv data to text data, run the following: <br>
 To convert pdf data to text data, run the following: <br>
 `python src/convert_test_data.py --pdfdir <data directory> --outdir <desired output directory>
 `
+<br>
+
+> For the time being, you can ignore the bad naming scheme, that will be fixed later to clarity
 
 ## train_classifier.py
 
@@ -34,9 +37,7 @@ Example output: <br>
 
 ## predict.py
 
-For testing predicted category based on resume.
-
-> Still working on test data
+For testing predicted category based on processed resume.
 
 ## advice.py
 
