@@ -50,3 +50,5 @@ This is an MVP version of the Resume-Analyser (more like pre-beta). The test was
 3. **Missing sections**: Are "Experience", "Projects", "Education", or "Skills" missing?
 4. **Soft skills**: Check for mentions of soft skills (e.g., communication, leadership).
 5. **Role match**: Check how close the resume is to a target career path (e.g., Data Science).
+
+> I can't stress enough, this is not the final version
